@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 알파벳 쓰기 학습</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>영어 알파벳 쓰기 학습</h1>
+    </header>
+    <main id="content">
+        <canvas id="drawingCanvas"></canvas>
+        <div id="controls">
+            <button id="nextLetter">다음 글자</button>
+            <button id="clearCanvas">지우기</button>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => console.log('ServiceWorker 등록 성공:', registration.scope))
+                .catch(error => console.log('ServiceWorker 등록 실패:', error));
+        }
+    </script>
+</body>
+</html>
